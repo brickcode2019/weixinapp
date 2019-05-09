@@ -1,0 +1,31 @@
+<!--components/newUser/newUser.wxml-->
+<view class="newUser">
+  <form>
+    <view class="form-box">
+      <view class="row-wrap">
+        <view class="label-right">
+          <input name="mobile" class="input phoneInput" maxlength="11" type="number" placeholder="请输入手机号" bindinput="mobileInput"/>
+        </view>
+      </view>
+      <view class="row-wrap">
+        <view class="label-right clerafix">
+          <input name="name" class="input nameInput db fl" type="text" placeholder="请输入孩子姓名" bindinput="nameInput"/>
+          <picker class="pickBox db fr" bindchange="bindPickerChange" value="{{grade}}" range="{{array}}">
+            <view class="picker">
+              年级：{{array[grade]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="row-wrap">
+        <view class="label-right clerafix">
+          <view class="phoneCodeBox fl">
+            <input name="code" class="input codeInput db" maxlength="6" type="number" placeholder="验证码" bindinput="codeInput"/>
+            <button class="button db fr" disabled='{{disabled}}' data-id="2" bindtap="getVerificationCode">{{time}}</button>
+          </view>
+          <button class="saveBtn db fr" bindtap="submit">免费领取</button>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>

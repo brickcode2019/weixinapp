@@ -1,0 +1,13 @@
+{
+  "backgroundColor": "#FB5D5D",
+  "onReachBottomDistance": 10,
+  "usingComponents": {
+    "video-swiper": "../../components/videoSwiper/videoSwiper",
+    "search-box": "../../components/searchBox/searchBox",
+    "image-swiper": "../../components/imageSwiper/imageSwiper",
+    "consult": "../../components/consult/consult",
+    "tab-bar": "../../components/tabBar/tabBar",
+    "new-user": "../../components/newUser/newUser"
+  },
+  "navigationBarTitleText": "首页"
+}

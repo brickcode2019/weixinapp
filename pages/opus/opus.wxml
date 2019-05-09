@@ -1,0 +1,39 @@
+<!--pages/opus/opus.wxml-->
+<view class="container">
+  <!-- 作品视频 -->
+  <view class="videoBox">
+    <video class="myVideo db" src="{{opusInfo.url}}" autoplay="{{autoplay}}" objectFit="cover" controls poster="{{opusInfo.cover}}" style="width:100%;height:{{autoHeight}}px;"></video>
+  </view>
+  <!-- 作品简介 -->
+  <!-- 作品数据 -->
+  <view class="timesBox clearfix">
+    <text class="time db fl">作品提交时间：{{opusInfo.study_time}}</text>
+    <view class="viewedTimesBox fl">
+      <view class="clearfix">
+        <image class="viewedIcon db fl" src="../../images/follow.png"></image>
+        <text class="viewedTime db fl">{{}}999+</text>
+      </view>
+    </view>
+    <view class="commendBox fr">
+      <view class="clearfix">
+        <image class="commendIcon db fl" src="../../images/commend.png"></image>
+        <text class="commendTime db fl">{{}}999+</text>
+      </view>
+    </view>
+  </view>
+  <!-- 作品简介 -->
+  <view class="detailBox clearfix">
+    <view class="detail clearfix">
+      <view class="titleFollow clearfix">
+        <text class="titleB db fl">{{opusInfo.title}}</text>
+        <text class="startTime db fr">{{opusInfo.study_time}}</text>
+      </view>
+    </view>
+    <view class="introduct">
+      <view class="openExtend">{{opusInfo.desc}}</view>
+    </view>
+  </view>
+  <view class="shareBox">
+    <button class="share db" open-type="share">立即分享</button>
+  </view>
+</view>

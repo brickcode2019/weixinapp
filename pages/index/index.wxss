@@ -1,0 +1,58 @@
+/**index.wxss**/
+page {
+  background: #f9f9f9;
+  font-size: 26rpx;
+  color: #1b1b1b;
+}
+/* .page-body{
+  padding-bottom: 110rpx;
+} */
+.slide {
+  height: 30rpx;
+  background: #fff;
+  width: 100%;
+  padding: 14rpx 0 5rpx 0;
+}
+.slide .slide-bar {
+  width: 230rpx;
+  margin: 0 auto;
+  height: 1.5px;
+  background: #eee;
+}
+.slide .slide-bar .slide-show {
+  height: 100%;
+  background-color: #ff6969;
+}
+/*自定义tabbar样式*/
+.tabbar {
+  position: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0rpx;
+  background-color: #E5E5E5;
+  height: 96rpx;
+  width: 100%;
+}
+.barBtn {
+  flex: 1;
+}
+.btnIcon {
+  width: 46rpx;
+  height: 46rpx;
+  margin: 12rpx auto 10rpx;
+}
+.btnName {
+  font-size: 20rpx;
+  color: #817f80;
+  line-height: 20rpx;
+  text-align: center;
+}
+.active {
+  color: #2e9eec;
+}

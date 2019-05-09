@@ -1,0 +1,16 @@
+<!--components/imageSwiper/imageSwiper.wxml-->
+<swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" style="height:{{sHeight}};">
+  <block wx:for="{{imgList}}" wx:key="key">
+    <swiper-item>
+      <navigator wx:if="{{item.category == '4'}}" url="../extension/extension?course_id={{item.course_id}}" style="height:{{sHeight}};">
+        <image src="{{item.icon}}" class="slide-image" mode="aspectFill"/>
+      </navigator>
+      <navigator wx:elif="{{item.category != '4' && item.category != '0'}}" url="../classroom/classroom?id={{item.course_id}}" style="height:{{sHeight}};">
+        <image src="{{item.icon}}" class="slide-image" mode="aspectFill"/>
+      </navigator>
+      <view wx:else style="height:{{sHeight}};">
+        <image src="{{item.icon}}" class="slide-image" mode="aspectFill"/>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>

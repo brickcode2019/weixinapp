@@ -1,0 +1,36 @@
+/* pages/authorize/authorize.wxss */
+.container{
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+.userinfo{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40rpx 4%;
+}
+.logoBox{
+  width: 100%;
+  height: auto;
+}
+.logo{
+  width: 280rpx;
+  margin: 150rpx auto 200rpx;
+}
+.tag{
+  font-size: 26rpx;
+  line-height: 44rpx;
+}
+.black{
+  font-weight: 500;
+}
+.authorizeBtn{
+  margin: 30rpx auto;
+  background: #00AA5D;
+  color: #fff;
+  height: 80rpx;
+  border: none;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  line-height: 80rpx;
+}

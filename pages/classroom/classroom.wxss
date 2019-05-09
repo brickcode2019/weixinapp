@@ -1,0 +1,357 @@
+/* pages/classroom/classroom.wxss */
+.container{
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 110rpx;
+}
+.swiperBox{
+  position: relative;
+}
+.bannerPic{
+  width: 100%;
+  height: auto;
+}
+.countDownBox{
+  position: absolute;
+  left: 20rpx;
+  top: 0;
+  width: auto;
+  height: 60rpx;
+  background: linear-gradient(#f5a02d, #ff7900);
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  z-index: 19;
+  color: #fff;
+  line-height: 60rpx;
+  font-size: 20rpx;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.salesBox{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 20rpx 4%;
+  background: #3685F5;
+}
+.salesNum{
+  font-size: 20rpx;
+  line-height: 20rpx;
+  color: #fff;
+}
+.salesPrice{
+  font-size: 20rpx;
+  line-height: 20rpx;
+  color: #FCBE2C;
+}
+
+.groupListBox{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10rpx 4%;
+}
+.listBox{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #999999;
+}
+.listBox:last-child{
+  border-bottom: none;
+}
+.groupPic{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+}
+.infoBox{
+  width: 450rpx;
+  height: 100%;
+  box-sizing: border-box;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+}
+.groupName{
+  font-size: 24rpx;
+  color: #666;
+  line-height: 30rpx;
+}
+.groupDeadLine, .groupPeople{
+  font-size: 18rpx;
+  color: #4C3AAF;
+  line-height: 40rpx;
+}
+.groupPeople{
+  margin-left: 20rpx;
+}
+.goGroupBtn{
+  font-size: 18rpx;
+  padding: 10rpx 10rpx 10rpx 20rpx;
+  color: #fff;
+  background: linear-gradient(#1E68DE, #3685F5);
+  margin-top: 25rpx;
+  border-radius: 20rpx 0 0 20rpx;
+}
+.hasBuyBtn{
+  font-size: 18rpx;
+  padding: 10rpx 10rpx 10rpx 20rpx;
+  color: #666;
+  background: #e5e5e5;
+  margin-top: 25rpx;
+  border-radius: 20rpx 0 0 20rpx;
+}
+
+/* 课程信息 */
+.titleBox{
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 50rpx 4% 20rpx;
+}
+.classInfoBox{
+  width: 92%;
+  margin: 0 4%;
+  border-top: 1rpx solid #999999;
+  box-sizing: border-box;
+  box-shadow:-10rpx 0 10rpx #eee, /*左边阴影*/
+              10rpx 0 10rpx #eee, /*右边阴影*/
+              0 00px 0px #fff, /*顶部阴影*/
+              0 10rpx 10rpx #eee; /*底边阴影*/
+
+}
+.classTitleBox{
+  width: 100%;
+  position: relative;
+}
+.classTitle{
+  font-size: 42rpx;
+  color: #0043ae;
+  line-height: 60rpx;
+  width: 320rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.classTip{
+  font-size: 42rpx;
+  color: #0043ae;
+  width: 560rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.classDuration{
+  position: absolute;
+  right: 0;
+  top: 26rpx;
+  font-size: 20rpx;
+  line-height: 20rpx;color: #424242;
+}
+.classApply{
+  position: absolute;
+  right: 0;
+  bottom: 10rpx;
+  font-size: 24rpx;
+  line-break: 32rpx;
+  border-radius: 16rpx;
+  color: #fff;
+  padding: 0 20rpx;
+  background: linear-gradient(#f5a02d, #ff7900);
+}
+/* 课程特点 */
+.classTraitList{
+  width: 100%;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  background: #eee;
+  padding-bottom: 20rpx;
+}
+.classTrait{
+  flex: 1;
+  width: 20%;
+  min-width: 20%;
+  max-width: 20%;
+  box-sizing: border-box;
+  border-right: 2rpx solid #424242;
+  font-size: 18rpx;
+  color: #424242;
+  line-height: 20rpx;
+  height: 20rpx;
+  text-align: center;
+}
+/* 课程样式 */
+.video{
+  width: 690rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  height: 186rpx;
+  position: relative;
+}
+.profiles {
+  width: 360rpx;
+  height: 186rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(https://edu-mini-pro.oss-cn-hangzhou.aliyuncs.com/beike/teacher_bg.png?Expires=1541187399&OSSAccessKeyId=TMP.AQHBLkqAyOrLx0LLOZcNpg3YsOo9c3p2Adc0sJnGgvNIWpyBx9sPY0zb6seNADAtAhRaDN1v1SLhI43zky6l97gzWYi1igIVAJ_rBB5IJSJhP1IZvDndqRRoG_MW&Signature=HrB4jfpsNUn37CGHwyliN%2FT4Ylk%3D);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+}
+.profilesInfo{
+  width: 170rpx;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  padding-top: 40rpx;
+  font-size: 28rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.teacherName{
+  font-size: 24rpx;
+  color: #ffffff;
+  line-height: 24rpx;
+}
+.teacherTip{
+  font-size: 16rpx;
+  color: #ffffff;
+  margin-left: 8rpx;
+  line-height: 30rpx;
+}
+.createDate,.createTime{
+  font-size: 16rpx;
+  color: #ffffff;
+  line-height: 16rpx;
+  margin-top: 6rpx;
+}
+.purchase{
+  height: 40rpx;
+  line-height: 40rpx;
+  width: 100%;
+  color: #999999;
+  font-size: 20rpx;
+}
+.teacherPicBox{
+  width: 190rpx;
+  height: 100%;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+}
+.teacherPic{
+  width: 100%;
+  height: 100%;
+}
+.thumb_box{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 340rpx;
+  height: 186rpx;
+  overflow: hidden;
+}
+.thumb{
+  width: 340rpx;
+  height: 186rpx;
+}
+.playIcon{
+  width: 54rpx;
+  height: 60rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -27rpx;
+  margin-top: -30rpx;
+}
+
+.classroomTransBox{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+.transBox{
+  width: 100%;
+  margin: 0 auto
+}
+
+
+/*自定义tabbar样式*/
+.tabbar {
+  position: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0rpx;
+  background-color: #E5E5E5;
+  height: 96rpx;
+  width: 100%;
+}
+.barBtnS {
+  flex: 1;
+}
+.barBtnB{
+  flex: 2;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #447CE0;
+  border-radius: 48rpx 0 0 48rpx;
+  font-size: 20rpx;
+  line-height: 96rpx;
+  color: #fff;
+  text-align: center;
+}
+.separateBtn{
+  flex: 1;
+}
+.groupBtn{
+  flex: 1;
+  background: #F8B056;
+  border-radius: 48rpx 0 0 48rpx;
+}
+.btnIcon {
+  width: 46rpx;
+  height: 46rpx;
+  margin: 12rpx auto 10rpx;
+}
+.btnName {
+  font-size: 20rpx;
+  color: #817f80;
+  line-height: 20rpx;
+  text-align: center;
+}
+.active {
+  color: #3987F4;
+}
+.hasBuyBox{
+  flex: 1;
+  background: #3987F4;
+  color: #e5e5e5;
+  border-radius: 48rpx 0 0 48rpx;
+  font-size: 24rpx;
+  line-height: 96rpx;
+  text-align: center;
+}
+/* 咨询弹框 */
+.consultBox{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}

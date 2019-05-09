@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "公开课",
+  "usingComponents": {
+    "image-swiper": "../../components/imageSwiper/imageSwiper"
+  }
+}

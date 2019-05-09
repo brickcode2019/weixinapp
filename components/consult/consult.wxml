@@ -1,0 +1,35 @@
+<!--components/consult/consult.wxml-->
+<view class="container" animation="{{slide_up1}}">
+  <view class="consultBox">
+    <view class="form-box">
+      <view class="iconBox">
+        <image class="consultIcon db" src="../../images/consultIcon.png"></image>
+        <text class="consult db">我要咨询</text>
+      </view>
+      <view class="row-wrap">
+        <view class="label-right">
+          <input name="mobile" class="input phoneInput" placeholder-class="placeholder" maxlength="11" type="number" bindblur="mobileInput" placeholder="请输入手机号" />
+        </view>
+      </view>
+      <view class="row-wrap row-big">
+        <view class="label-right codeBox clearfix" style="position: relative;">
+          <input name="code" class="input phoneCodeInput db fl" placeholder-class="placeholder" maxlength="6" type="number" placeholder="短信验证码" bindblur="codeInput"/>
+          <button class="button db fr" disabled='{{disabled}}' data-id="2" bindtap="getVerificationCode">{{time}}</button>
+        </view>
+      </view>
+      <view class="row-wrap">
+        <view class="label-right">
+          <label class="db fl">
+            <checkbox-group bindchange="agreeMent">
+              <checkbox checked="{{ischecked}}">我已阅读并同意</checkbox>
+            </checkbox-group>
+          </label>
+          <navigator class="db fl agreement" url="{{naviUrl}}">《贝壳编程用户协议》</navigator>
+        </view>
+      </view>
+      <view class="saveBox">
+        <button class="save-btn" bindtap="_submitEvent">提交</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<view class="container">
+  <view class="titleBox">
+    <view class="iconBox">
+      <image class="successIcon db" src="../../images/success.png"></image>
+    </view>
+    <text class="title db">支付成功</text>
+    <text class="tip db">快快分享给您的好友，提高拼团成功的机率！</text>
+  </view>
+  <view class="classInfoBox">
+    <view class="classTitleBox">
+      <text class="classTitle db">{{title}}</text>
+      <text class="classTip db">{{desc}}</text>
+      <text class="classDuration db">
+        <text class="classDurationTip">课程上传日期：{{up_time}}</text>
+        <!-- <text class="startTime">2018.08.20</text>至<text class="endTime">2020.08.20</text> -->
+      </text>
+      <text class="classApply db">零基础{{classApply}}</text>
+    </view>
+    <view class="classTraitList">
+      <block wx:for="{{classTraitList}}"> 
+        <text class="classTrait db fl" style="border-right:{{(index+1)%5==0 ? 'none' : '1rpx solid #424242'}}">{{item}}</text>
+      </block>
+    </view>
+    <view class="infoBox">
+      <view class="video" bindtap="goVideo">
+        <view class="profiles clearfix">
+          <view class="profilesInfo fl">
+            <text class="teacherName">{{teacher}}</text>
+            <text class="teacherTip">授课老师</text>
+            <text class="createDate db">10月20日-12月30日</text>
+            <text class="createTime db">每周四 19:00-20:30</text>
+          </view>
+          <view class="teacherPicBox fl">
+            <image class="teacherPic db fl" src="../../images/seo.png"></image>
+          </view>
+        </view>
+        <view class="thumb_box">
+          <image class="thumb db" src="{{bannerPic}}"></image>
+          <image class="playIcon db" src="../../images/playIcon.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="coinBox">
+    <text class="coin">恭喜您获得{{buy_award}}金币</text>
+  </view>
+  <view class="shareBox">
+    <button class="share db" open-type="share">去分享，去拼团</button>
+  </view>
+</view>

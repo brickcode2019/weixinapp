@@ -1,0 +1,42 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="loginBox">
+    <view class="logoBox">
+      <image class="logo" src="../../images/brickcode.png" mode="widthFix"></image>
+    </view>
+    <form bindsubmit="bindSave">
+      <view class="form-box">
+        <view class="row-wrap">
+          <view class="label-right">
+            <input name="mobile" class="input phoneInput" placeholder-class="placeholder" maxlength="11" type="number" bindinput="mobileInput" placeholder="请输入手机号" />
+          </view>
+        </view>
+        <view class="row-wrap">
+          <view class="label-right codeBox clearfix" style="position: relative;">
+            <input name="code" class="input codeInput db fl" placeholder-class="placeholder" maxlength="4" type="text" placeholder="验证码" bindblur="saveCode" bindinput="saveCode"/>
+            <canvas class="canvas fr" canvas-id="canvas" bindtap="onReady"></canvas>
+          </view>
+        </view>
+        <view class="row-wrap">
+          <view class="label-right codeBox clearfix" style="position: relative;">
+            <input name="code" class="input phoneCodeInput db fl" placeholder-class="placeholder" maxlength="6" type="number" placeholder="短信验证码"  bindinput="savePhoneCode"/>
+            <button class="button db fr" disabled='{{disabled}}' data-id="2" bindtap="getVerificationCode">{{time}}</button>
+          </view>
+        </view>
+        <!-- <view class="row-wrap">
+          <view class="label-right">
+            <label class="db fl">
+              <checkbox checked="{{ischecked}}">我已阅读并同意</checkbox>
+            </label>
+            <navigator class="db fl agreement" url="{{naviUrl}}">《贝壳用户协议》</navigator>
+          </view>
+        </view> -->
+        <view class="row-wrap">
+          <view class="label-right">
+            <button class="save-btn" formType="submit" bindtap="submit">立即登录</button>
+          </view>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

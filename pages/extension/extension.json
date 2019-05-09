@@ -1,0 +1,8 @@
+{
+  "backgroundColor": "#FB5D5D",
+  "onReachBottomDistance": 10,
+  "usingComponents": {
+    "swiper-list": "../../components/swiperList/swiperList"
+  },
+  "navigationBarTitleText": "贝壳教育"
+}

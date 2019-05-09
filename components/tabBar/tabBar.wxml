@@ -1,0 +1,30 @@
+<!--components/tabBar/tabBar.wxml-->
+<view class="tabBar">
+  <view class="tabBarTitle">
+    <text class="title">推荐课程</text>
+  </view>
+  <scroll-view class="tabHeader">
+  <block wx:for="{{tabList}}" wx:key="{{item.course_id}}">
+    <view class="tabItem {{currentTab==item.course_id?'active':''}}" data-current="{{item.course_id}}" data-title="{{item.name}}" bindtap="swichNav">
+      <view class="tab-item-box">
+        <image class="tab-item-image db" src="{{tabList[0].cover}}" mode="widthFix"></image>
+        <text class="tab-item-title db">{{item.name}}</text>
+        <text class="tab-item-info db">{{item.desc}}</text>
+      </view>
+    </view>
+  </block>
+  </scroll-view>
+  <block wx:for="{{tabList}}" wx:key="{{item.course_id}}">
+    <scroll-view scroll-y="true" class="tabContentItem {{currentTab==item.course_id?'active':''}}">
+      <block wx:for="{{item.detail_list}}">
+        <view class="tabContent clearfix">
+          <view class="contentInfo fl">
+            <text class="contentTitle db">{{item.name}}</text>
+            <text class="contentDes db">{{item.desc}}</text>
+          </view>
+          <text class="contentBtn db" bindtap="goClassRoom">前往学习</text>
+        </view>
+      </block>
+    </scroll-view>
+  </block>
+</view>

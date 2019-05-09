@@ -1,0 +1,45 @@
+/* components/swiperList/swiperList.wxss */
+/* 底部滚动列表  */
+.contentBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ede1d4;
+}
+
+.tab-right {
+  width: 90%;
+  margin: 0 auto;
+  height: 60rpx;
+}
+
+.content-item {
+  height: 60rpx;
+  border-bottom: 1px solid #ede1d4;
+  width: 95%;
+}
+
+.name {
+  font-size: 28rpx;
+  float: left;
+  line-height: 60rpx;
+  color: #b0aaa9;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.time{
+  font-size: 28rpx;
+  float: left;
+  line-height: 60rpx;
+  color: #b0aaa9;
+  height: 100%;
+}
+.type{
+  font-size: 28rpx;
+  float: right;
+  line-height: 60rpx;
+  color: #ff9b52;
+  height: 100%;
+}

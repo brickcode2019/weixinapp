@@ -1,0 +1,12 @@
+<!--pages/authorize/authorize.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <view class="logoBox">
+      <image class="logo db" mode="widthFix" src="../../images/brickcode.png"></image>
+      <text class="tag black db">申请获取一下权限</text>
+      <text class=" tag db">获取您的公开信息（昵称、头像等）</text>
+    </view>
+    <!-- <button class="authorizeBtn db" wx:if="{{!hasUserInfo && canIUse && getUserInfoFail}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button> -->
+    <button class="authorizeBtn db" wx:if="{{!hasUserInfo || canIUse || getUserInfoFail}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
+  </view>
+</view>

@@ -1,0 +1,234 @@
+/* pages/paySuccess/paySuccess.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+/* 支付成功样式 */
+.titleBox{
+  width: 100%;
+  height: 290rpx;
+  box-sizing: border-box;
+  padding: 0 4%;
+  position: relative;
+  background: linear-gradient(#5cc9fc, #4682f3);
+}
+.iconBox{
+  width: 84rpx;
+  height: 84rpx;
+  position: absolute;
+  top: 36rpx;
+  left: 50%;
+  margin-left: -42rpx;
+  background: #fff;
+  border-radius: 50%;
+}
+.successIcon{
+  width: 44rpx;
+  height: 34rpx;
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+}
+.title{
+  font-size: 42rpx;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 144rpx;
+  line-height: 42rpx;
+}
+.tip{
+  font-size: 28rpx;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 40rpx;
+  line-height: 28rpx;
+}
+/* 课程信息 */
+.classInfoBox{
+  width: 100%;
+  padding: 0 4%;
+  margin-top: 70rpx;
+  box-sizing: border-box;
+}
+.classTitleBox{
+  width: 100%;
+  position: relative;
+}
+.classTitle{
+  font-size: 42rpx;
+  color: #0043ae;
+  line-height: 60rpx;
+  width: 320rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.classTip{
+  font-size: 42rpx;
+  color: #0043ae;
+  width: 560rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.classDuration{
+  position: absolute;
+  right: 0;
+  top: 26rpx;
+  font-size: 20rpx;
+  line-height: 20rpx;color: #424242;
+}
+.classApply{
+  position: absolute;
+  right: 0;
+  bottom: 10rpx;
+  font-size: 24rpx;
+  line-break: 32rpx;
+  border-radius: 16rpx;
+  color: #fff;
+  padding: 0 20rpx;
+  background: linear-gradient(#f5a02d, #ff7900);
+}
+/* 课程特点 */
+.classTraitList{
+  width: 100%;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  background: #eee;
+  padding-bottom: 20rpx;
+}
+.classTrait{
+  flex: 1;
+  width: 20%;
+  min-width: 20%;
+  max-width: 20%;
+  box-sizing: border-box;
+  border-right: 2rpx solid #424242;
+  font-size: 18rpx;
+  color: #424242;
+  line-height: 20rpx;
+  height: 20rpx;
+  margin-top: 20rpx;
+  text-align: center;
+}
+/* 课程样式 */
+.video{
+  width: 690rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  height: 186rpx;
+  position: relative;
+}
+.profiles {
+  width: 360rpx;
+  height: 186rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(https://edu-mini-pro.oss-cn-hangzhou.aliyuncs.com/beike/teacher_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+}
+.profilesInfo{
+  width: 170rpx;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  padding-top: 40rpx;
+  font-size: 28rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.teacherName{
+  font-size: 24rpx;
+  color: #ffffff;
+  line-height: 24rpx;
+}
+.teacherTip{
+  font-size: 16rpx;
+  color: #ffffff;
+  margin-left: 8rpx;
+  line-height: 30rpx;
+}
+.createDate,.createTime{
+  font-size: 16rpx;
+  color: #ffffff;
+  line-height: 16rpx;
+  margin-top: 6rpx;
+}
+.purchase{
+  height: 40rpx;
+  line-height: 40rpx;
+  width: 100%;
+  color: #999999;
+  font-size: 20rpx;
+}
+.teacherPicBox{
+  width: 190rpx;
+  height: 100%;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+}
+.teacherPic{
+  width: 100%;
+  height: 100%;
+}
+.thumb_box{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 330rpx;
+  height: 186rpx;
+  overflow: hidden;
+}
+.thumb{
+  width: 330rpx;
+  height: 186rpx;
+}
+.playIcon{
+  width: 54rpx;
+  height: 60rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -27rpx;
+  margin-top: -30rpx;
+}
+/* 获得金币 */
+.coinBox{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10rpx 4%;
+  text-align: center;
+  margin-top: 52rpx;
+}
+.coin{
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #fab14c;
+}
+/* 分享按钮 */
+.shareBox{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 4%;
+  height: 68rpx;
+  margin-top: 10rpx;
+}
+.share{
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 28rpx;
+  line-height: 68rpx;
+  border-radius: 34rpx;
+  border: 0 solid #ffffff;
+  background: #fab14c;
+}

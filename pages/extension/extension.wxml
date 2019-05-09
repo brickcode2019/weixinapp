@@ -1,0 +1,126 @@
+<!--pages/extension/extension.wxml-->
+<scroll-view class="container">
+  <view class="groupInfoBox" wx:if="{{group_id && audit == '0'}}">
+    <view class="groupInfo">
+      <view class="groupInfoTitle clearfix">
+        <view class="titlePicBox fl">
+          <image class="titlePic db" src="{{commanderPic}}" mode="widthFix"></image>
+        </view>
+        <view class="titleInfo fl">
+          <text class="titleName db">{{commander}}</text>
+          <text class="titleIntr db">我发现一个超棒的课程！推荐给你</text>
+        </view>
+      </view>
+      <view class="courseBox clearfix">
+        <view class="coursePicBox fl">
+          <image class="coursePic db" src="{{coursePic}}" mode="widthFix"></image>
+        </view>
+        <view class="courseInfoBox fl">
+          <text class="courseTitle db">{{courseTitle}}</text>
+          <text class="coursePrice db">￥{{coursePrice}}</text>
+          <text class="courseGroupPrice db">￥{{courseGroupPrice}}</text>
+        </view>
+      </view>
+      <view class="groupListBox">
+        <view class="groupList">
+          <view class="groupItem">
+            <image class="groupItemPic db" src="{{commanderPic}}" mode="widthFix"></image>
+            <text class="commander db">团长</text>
+          </view>
+          <block wx:for="{{avatar_list}}" wx:key="{{item}}">
+            <view class="groupItem">
+              <image class="groupItemPic db" src="{{item}}" mode="widthFix"></image>
+            </view>
+          </block>
+        </view>
+        <view class="groupTag">
+          <text class="tagInfo db" wx:if="{{people == '0'}}">该团已拼课成功！自己开团试试吧！</text>
+          <text class="tagInfo db" wx:else>拼团中！赶紧加入拼团吧！</text>
+        </view>
+        <view class="buyButtonBox">
+          <view class="normalBuy" bindtap="goPay">
+            <text class="price db">￥{{coursePrice}}</text>
+            <text class="priceIntr db">单独全价购</text>
+          </view>
+          <view class="groupBuy" wx:if="{{people == '0'}}" bindtap="goGroup">
+            <text class="price db">￥{{courseGroupPrice}}</text>
+            <text class="priceIntr db">一键开团（3人团）</text>
+          </view>
+          <view class="groupBuy" wx:else bindtap="goGroupPay">
+            <text class="price db">￥{{courseGroupPrice}}</text>
+            <text class="priceIntr db">一键加入拼团</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="picBox clearfix">
+    <image class="extensionPic db" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/extension1.png" mode="widthFix"></image>
+    <video class="extensionVideo db" wx:if="{{isPlay}}" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/extension.mp4" controls autoplay bindended="hideVideo"></video>
+    <image class="playIcon db" wx:else src="../../images/playBtn.png" bindtap="playVideo"></image>
+  </view>
+  <view class="picBox clearfix">
+    <image class="extensionPic db" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/extension2.png" mode="widthFix"></image>
+  </view>
+  <view class="picBox clearfix">
+    <image class="extensionPic db" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/extension3.png" mode="widthFix"></image>
+  </view>
+  <view class="picBox clearfix">
+    <image class="extensionPic db" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/extension4.png" mode="widthFix"></image>
+    <image class="demoPic db" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/demo.gif"></image>
+  </view>
+  <view class="picBox clearfix">
+    <image class="extensionPic db" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/extension5.png" mode="widthFix"></image>
+  </view>
+  <view class="picBox clearfix">
+    <image class="extensionPic db" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/extension6.png" mode="widthFix"></image>
+  </view>
+  <view class="picBox clearfix">
+    <image class="extensionPic db" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/extension7.png" mode="widthFix"></image>
+  </view>
+  <view class="picBox clearfix">
+    <image class="extensionPic db" src="https://edu-bk.oss-cn-shenzhen.aliyuncs.com/extension8.png" mode="widthFix"></image>
+  </view>
+</scroll-view>
+
+<swiper-list class="buyListBar" buyList="{{buyLists}}" wx:if="{{audit == '0'}}"></swiper-list>
+<!-- 自定义底部按钮 -->
+<view class="tabbar" wx:if="{{hasBuy}}">
+  <view class="barBtnS" bindtap="openConsult">
+    <view class="consult">
+      <image class="btnIcon db" src="../../images/consult.png"></image>
+      <text class="btnName db active">我要咨询</text>
+    </view>
+  </view>
+  <!-- <view class="hasBuyBox" bindtap="gosuccess"> -->
+  <view class="hasBuyBox">
+    <text class="hasBuy">已购买</text>
+  </view>
+</view>
+<view class="tabbar" wx:else>
+  <view class="barBtnS" bindtap="openConsult">
+    <view class="consult">
+      <image class="btnIcon db" src="../../images/consult.png"></image>
+      <text class="btnName db active">我要咨询</text>
+    </view>
+  </view>
+  <view class="barBtnB" wx:if="{{audit == '0'}}">
+    <view class="separateBtn" bindtap="goPay">
+      <text>直接购买{{coursePrice}}元</text>
+    </view>
+    <view class="groupBtn" bindtap="goGroup">
+      <text>拼团（3人）{{courseGroupPrice}}元</text>
+    </view>
+  </view>
+</view>
+<!-- <view class="tabbar" wx:else>
+  <view class="barBtnS" bindtap="openConsult">
+    <view class="consult">
+      <image class="btnIcon db" src="../../images/consult.png"></image>
+      <text class="btnName db active">我要咨询</text>
+    </view>
+  </view>
+  <view class="barBtnBLinshi" bindtap="goPay">
+    <text>直接购买99元</text>
+  </view>
+</view> -->

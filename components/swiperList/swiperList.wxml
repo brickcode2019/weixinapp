@@ -1,0 +1,16 @@
+<!--components/swiperList/swiperList.wxml-->
+<view class='contentBottom'>
+  <swiper class="tab-right" style='background:{{bgColor}};' vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='1'>
+    <view class="right-item">
+      <block wx:for='{{buyList}}' wx:for-index="idx">
+        <swiper-item>
+          <view class='content-item'>
+            <text class='name'>用户：{{item.username}}</text>
+            <text class='time'>{{item.success_time}}</text>
+            <text class='type'>{{item.type}}</text>
+          </view>
+        </swiper-item>
+      </block>
+    </view>
+  </swiper>
+</view>

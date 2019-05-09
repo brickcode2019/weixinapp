@@ -1,0 +1,7 @@
+{
+  "onReachBottomDistance": 10,
+  "usingComponents": {
+    "consult": "../../components/consult/consult",
+    "image-swiper": "../../components/imageSwiper/imageSwiper"
+  }
+}

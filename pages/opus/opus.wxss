@@ -1,0 +1,193 @@
+/* pages/opus/opus.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+}
+/* .page-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-bottom: 110rpx;
+} */
+.timesBox{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 4%;
+}
+.time{
+  font-size: 24rpx;
+  color: #000;
+  line-height: 24rpx;
+}
+.viewedTimesBox{
+  margin-left: 160rpx;
+}
+.viewedIcon{
+  width: 34rpx;
+  height: 24rpx;
+}
+.viewedTime{
+  font-size: 24rpx;
+  color: #000;
+  line-height: 24rpx;
+  margin-left: 10rpx;
+}
+.commendIcon{
+  width: 28rpx;
+  height: 24rpx;
+}
+.commendTime{
+  font-size: 24rpx;
+  color: #000;
+  line-height: 24rpx;
+  margin-left: 10rpx;
+}
+
+
+
+/* 作品简介 */
+.detailBox{
+  width: 690rpx;
+  box-sizing: border-box;
+  background-color: #4179e3;
+  margin: 30rpx 30rpx;
+  border-radius: 8rpx;
+}
+.titleFollow{
+  width: 100%;
+  height: 68rpx;
+}
+.titleB{
+  font-size: 32rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  margin-top: -6rpx;
+  background: #fab14c;
+  border-top-left-radius: 8rpx;
+  color: #ffffff;
+  padding: 0 40rpx 0 20rpx;
+}
+.startTime{
+  font-size: 20rpx;
+  color: #fff;
+  line-height: 68rpx;
+  margin-right: 20rpx;
+}
+/* 作品内容简介 */
+.introduct{
+  position: relative;
+  width: 680rpx;
+  margin: 0 auto 5rpx;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 30rpx 6rpx;
+}
+.extend{
+  width: 100%;
+  color: #666666;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  text-align: justify;
+  text-indent: 2em;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.openExtend{
+  width: 100%;
+  color: #666666;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  text-align: justify;
+  text-indent: 2em;
+}
+.open{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 26rpx;
+  color: #666666;
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.clip{
+  margin:0 5rpx;
+}
+.openBtn{
+  color: #49c6c3;
+}
+/* 分享按钮 */
+.shareBox{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 4%;
+  height: 68rpx;
+  margin-top: 52rpx;
+  margin-bottom: 80rpx;
+}
+.share{
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 28rpx;
+  line-height: 68rpx;
+  border-radius: 34rpx;
+  border: 0 solid #ffffff;
+  background: #fab14c;
+}
+/*缺省页*/
+.noClassBox{
+  width: 660rpx;
+  padding: 180rpx 45rpx;
+}
+.noting{
+  width: 300rpx;
+  height: 480rpx;
+  margin: 0 auto;
+}
+.prompt{
+  font-size: 32rpx;
+  color: #a7a7a7;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+
+
+/*自定义tabbar样式*/
+.tabbar {
+  position: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0rpx;
+  background-color: #E5E5E5;
+  height: 96rpx;
+  width: 100%;
+}
+.barBtn {
+  flex: 1;
+}
+.btnIcon {
+  width: 46rpx;
+  height: 46rpx;
+  margin: 12rpx auto 10rpx;
+}
+.btnName {
+  font-size: 20rpx;
+  color: #817f80;
+  line-height: 20rpx;
+  text-align: center;
+}
+.active {
+  color: #2e9eec;
+}

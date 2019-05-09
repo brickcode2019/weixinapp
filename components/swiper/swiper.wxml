@@ -1,0 +1,38 @@
+<!--components/swiper/swiper.wxml-->
+<view class="recommend">
+  <view class="btn prev" bindtap="prev">
+    <image src="../../images//arrow1.png" alt="arrow"/>
+  </view>
+  <view class="btn next" bindtap="next">
+    <image src="../../images//arrow2.png" alt="arrow"/>
+  </view>
+  <view class="swiperList">
+    <view class="swiperBox recommend3">
+      <view class="imageBox">
+        <image class="swiperImage" mode="widthFix" src="../../images/banner1.jpg" />
+      </view>
+      <view class="infoBox">
+        <text class="title db">Python代码编程课</text>
+        <text class="info db">Python学习从娃娃抓起</text>
+      </view>
+    </view>
+    <view class="swiperBox recommend4">
+      <view class="imageBox">
+        <image class="swiperImage" mode="widthFix" src="../../images/banner2.jpg" />
+      </view>
+      <view class="infoBox">
+        <text class="title db">Python代码编程课</text>
+        <text class="info db">Python学习从娃娃抓起</text>
+      </view>
+    </view>
+    <view class="swiperBox recommend5">
+      <view class="imageBox">
+        <image class="swiperImage" mode="widthFix" src="../../images/banner3.jpg" />
+      </view>
+      <view class="infoBox">
+        <text class="title db">Python代码编程课</text>
+        <text class="info db">Python学习从娃娃抓起</text>
+      </view>
+    </view>
+  </view>
+</view>

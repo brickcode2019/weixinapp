@@ -1,0 +1,58 @@
+/**app.wxss**/
+page {
+  font-family: -apple-system-font, 'Microsoft YaHei', 'Helvetica Neue', Helvetica, sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: #ffffff;
+} 
+.db{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clerafix{
+  display: table;/* 触发bfc,让div具有包裹性*/
+}
+.clerafix:before,.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+checkbox .wx-checkbox-input{
+  border-radius: 50%;
+  height: 26rpx;
+  width: 26rpx;
+  margin-top: -4rpx;
+  border: 1rpx solid #ccc;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  background-color: #26AAF5;
+  border: 1rpx solid #ccc;
+}

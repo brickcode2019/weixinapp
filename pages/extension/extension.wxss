@@ -1,0 +1,289 @@
+/* pages/extension/extension.wxss */
+.container{
+  width: 100%;
+  height: auto;
+  background: #FBC87E;
+}
+/* 拼团信息样式 */
+.groupInfoBox{
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  padding: 0 4% 40rpx;
+  background: #fff;
+}
+.groupInfo{
+  width: 100%;
+  height: auto;
+}
+.groupInfoTitle{
+  width: 100%;
+  height: 120rpx;
+}
+.titlePicBox{
+  width: 110rpx;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.titlePic{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: none;
+}
+.titleInfo{
+  width: 560rpx;
+  height: 120rpx;
+}
+.titleName{
+  font-size: 26rpx;
+  color: #333;
+  line-height: 60rpx;
+}
+.titleIntr{
+  font-size: 24rpx;
+  color: #666;
+  line-height: 50rpx;
+}
+.courseBox{
+  width: 100%;
+  height: auto;
+  padding: 10rpx 0;
+  background: #FEFCE1;
+}
+.coursePicBox{
+  width: 230rpx;
+  height: auto;
+  margin-right: 20rpx;
+}
+.coursePic{
+  width: 230rpx;
+  height: auto;
+}
+.courseInfoBox{
+  width: 440rpx;
+}
+.courseTitle{
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #666;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.coursePrice{
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #666;
+  text-decoration: line-through;
+}
+.courseGroupPrice{
+  color: #CE422A;
+  font-size: 36rpx;
+  line-height: 40rpx;
+}
+.groupListBox{
+  width: 100%;
+  height: auto;
+}
+.groupList{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 50rpx;
+  display: flex;
+}
+.groupItem{
+  flex: 1;
+  position: relative;
+}
+.groupItemPic{
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  border: 4rpx solid #5DBDC4;
+  border-radius: 50%;
+}
+.commander{
+  position: absolute;
+  bottom: -30rpx;
+  left: 50%;
+  margin-left: -60rpx;
+  width: 120rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  background: #22C0FD;
+  color: #fff;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 24rpx;
+}
+.groupTag{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.tagInfo{
+  color: #C24F3B;
+  font-size: 26rpx;
+}
+.buyButtonBox{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  color: #fff;
+  margin-top: 20rpx;
+}
+.normalBuy{
+  flex: 2;
+  height: 100%;
+  background: #FC7643;
+  text-align: center;
+  border-radius: 60rpx;
+}
+.groupBuy{
+  flex: 3;
+  height: 100%;
+  background: #FD4F1F;
+  text-align: center;
+  border-radius: 60rpx;
+  margin-left: 10rpx;
+}
+.price{
+  width: 100%;
+  font-size: 38rpx;
+  line-height: 60rpx;
+}
+.priceIntr{
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+
+
+
+/* 推广页的样式 */
+.picBox{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.extensionPic{
+  width: 100%;
+}
+.extensionVideo{
+  position: absolute;
+  top: 776rpx;
+  left: 157rpx;
+  width: 454rpx;
+  height: 308rpx;
+}
+.playIcon{
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  top: 876rpx;
+  left: 332rpx;
+}
+.demoPic{
+  position: absolute;
+  left: 156rpx;
+  top: 903rpx;
+  width: 430rpx;
+  height: 260rpx;
+}
+/* 自定义跑马灯 */
+.buyListBar{
+  position: fixed;
+  left: 0;
+  bottom: 96rpx;
+  right: 0;
+  width: 100%;
+}
+/*自定义tabbar样式*/
+.tabbar {
+  position: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0rpx;
+  background-color: #E5E5E5;
+  height: 96rpx;
+  width: 100%;
+}
+.barBtnS {
+  flex: 1;
+}
+.barBtnB{
+  flex: 2;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #447CE0;
+  border-radius: 48rpx 0 0 48rpx;
+  font-size: 20rpx;
+  line-height: 96rpx;
+  color: #fff;
+  text-align: center;
+}
+.barBtnBLinshi{
+  flex: 1;
+  background: #447CE0;
+  border-radius: 48rpx 0 0 48rpx;
+  font-size: 26rpx;
+  line-height: 96rpx;
+  color: #fff;
+  text-align: center;
+}
+.separateBtn{
+  flex: 1;
+}
+.groupBtn{
+  flex: 1;
+  background: #F8B056;
+  border-radius: 48rpx 0 0 48rpx;
+}
+.btnIcon {
+  width: 46rpx;
+  height: 46rpx;
+  margin: 12rpx auto 10rpx;
+}
+.btnName {
+  font-size: 20rpx;
+  color: #817f80;
+  line-height: 20rpx;
+  text-align: center;
+}
+.active {
+  color: #3987F4;
+}
+.hasBuyBox{
+  flex: 1;
+  background: #3987F4;
+  color: #e5e5e5;
+  border-radius: 48rpx 0 0 48rpx;
+  font-size: 24rpx;
+  line-height: 96rpx;
+  text-align: center;
+}
+/* 咨询弹框 */
+.consultBox{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}

@@ -1,0 +1,211 @@
+/* pages/sale/sale.wxss */
+.container{
+  background-color: #f8f8f8;
+  width: 100%;
+}
+/* 销售页面 */
+.sale{
+  width: 690rpx;
+  padding:40rpx 30rpx;
+  height: auto;
+  margin-top: 20rpx;
+  background: #ffffff;
+}
+.salePicBox{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+}
+.salePic{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.saleInfoBox{
+  width: 510rpx;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+}
+.saleName{
+  color: #333333;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+.saleTitle{
+  color: #666666;
+  font-size: 26rpx;
+  margin-left: 10rpx;
+}
+.saleHospital{
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 24rpx;
+  margin-top: 14rpx;
+}
+.saleDepartment{
+  margin-left: 10rpx;
+}
+.saleIntroduct{
+  position: relative;
+}
+.introduct{
+  font-size: 24rpx;
+  color: #666666;
+  padding: 10rpx 0;
+  line-height: 32rpx;
+}
+.companyInfoBox{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10rpx 4%;
+}
+.opensaleExtend{
+  width: 100%;
+  color: #666666;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  line-height: 38rpx;
+  text-align: justify;
+}
+.saleExtend{
+  width: 100%;
+  color: #666666;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  line-height: 38rpx;
+  text-align: justify;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.goodat{
+  color: #49c6c3;
+}
+.saleOpen{
+  font-size: 26rpx;
+  color: #666666;
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  margin-left: 20rpx;
+}
+.saleClip{
+  margin:0 5rpx;
+}
+.saleOpenBtn{
+  color: #49c6c3;
+}
+
+/* 相关视频 */
+.related{
+  width: 100%;
+  padding: 0 0 20rpx;
+  background: #ffffff;
+  margin-top: 16rpx;
+}
+.bigTitle{
+  width: 694rpx;
+  height: 40rpx;
+  line-height: 30rpx;
+  color: #3c3d41;
+  font-size: 30rpx;
+  font-weight: 600;
+  padding: 30rpx 28rpx 0;
+}
+.video_list {
+  width: 690rpx;
+  padding: 30rpx 0rpx 30rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  height: 138rpx;
+  border-bottom: 1px #eee solid;
+}
+.video_list:last-child{
+  border-bottom: none;
+}
+.thumb_box{
+  width: 234rpx;
+  height: 138rpx;
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+  border: 1rpx solid #eeeeee;
+}
+.thumb{
+  width: 234rpx;
+  height: 138rpx;
+}
+.playIcon{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 92rpx;
+  top: 44rpx;
+}
+.status{
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  display: block;
+  padding: 0 10rpx 0 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  text-align: right;
+  color: #ffffff;
+  border-radius: 15rpx;
+  background-color: rgba(0, 0, 0,0.2);
+}
+.profiles {
+  margin-left: 20rpx;
+  width: 430rpx;
+  height: 150rpx;
+  position: relative;
+}
+
+.title {
+  width: 100%;
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: 500;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1;
+}
+.desc{
+  width: 100%;
+  font-size: 22rpx;
+  color: #555555;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.purchase{
+  position: absolute;
+  height: 40rpx;
+  line-height: 40rpx;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: #999999;
+  font-size: 20rpx;
+}
+.followBox{
+  margin-right: 30rpx;
+}
+.followPic{
+  width: 30rpx;
+  height: 20rpx;
+  margin-top: 10rpx;
+  margin-right: 6rpx;
+}

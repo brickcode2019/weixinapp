@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/extension/extension",
+    "pages/login/login",
+    "pages/sale/sale",
+    "pages/open-class/open-class",
+    "pages/authorize/authorize",
+    "pages/opusList/opusList",
+    "pages/opus/opus",
+    "pages/paySuccess/paySuccess",
+    "pages/classroom/classroom",
+    "pages/consult/consult"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#2394F5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/open-class/open-class",
+        "text": "公开课",
+        "iconPath": "images/open_class.png",
+        "selectedIconPath": "images/open_class_selected.png"
+      },
+      {
+        "pagePath": "pages/opusList/opusList",
+        "text": "作品",
+        "iconPath": "images/opus.png",
+        "selectedIconPath": "images/opus_selected.png"
+      }
+    ]
+  }
+}

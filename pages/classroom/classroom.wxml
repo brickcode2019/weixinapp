@@ -1,0 +1,90 @@
+<!--pages/classroom/classroom.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="swiperBox">
+    <view class="countDownBox">
+      <text>距报名截止还剩 {{countDownTime}}</text>
+    </view>
+    <!-- <image-swiper sHeight="330rpx" imgList="{{banners}}" url="icon"></image-swiper> -->
+    <image class="bannerPic db" src="{{bannerPic}}" mode="widthFix"></image>
+    <view class="salesBox clearfix" wx:if="{{audit == '0'}}">
+      <view class="salesNum fl">
+        <text>已购买{{sales}}</text>
+        <text style="margin-left: 10rpx;">已成团{{group_sales}}</text>
+      </view>
+      <view class="salesPrice fr">
+        <text>优惠价{{price}}元</text>
+        <text style="margin-left: 10rpx;">拼团价{{group_price}}元</text>
+      </view>
+    </view>
+  </view>
+  <!-- 拼团列表 -->
+  <view class="groupListBox" wx:if="{{audit == '0'}}">
+    <block wx:for="{{group_list}}" wx:for-item="item" wx:key="id">
+      <view class="listBox clearfix">
+        <image class="groupPic db fl" src="{{item.avatar}}"></image>
+        <view class="infoBox fl">
+          <text class="groupName db">{{item.username}}</text>
+          <text class="groupDeadLine">拼团倒计时：{{item.deadline}}</text>
+          <text class="groupPeople">还差 {{item.people}} 人</text>
+        </view>
+        <text class="goGroupBtn hasBuyBtn db fr" wx:if="{{hasBuy}}" data-id="{{item.group_id}}">直接拼团》</text>
+        <text class="goGroupBtn db fr" wx:else bindtap="goGroupPay" data-id="{{item.group_id}}">直接拼团》</text>
+      </view>
+    </block>
+  </view>
+  <!-- 课程信息 -->
+  <view class="titleBox">
+    <view class="classTitleBox">
+      <text class="classTitle db">{{title}}</text>
+      <text class="classTip db">{{desc}}</text>
+      <text class="classDuration db">
+        <text class="classDurationTip">课程开课日期：{{active_time}}</text>
+        <!-- <text class="startTime">2018.08.20</text>至<text class="endTime">2020.08.20</text> -->
+      </text>
+      <text class="classApply db">零基础{{classApply}}</text>
+    </view>
+  </view>
+  <view class="classInfoBox">
+    <view class="classTraitList">
+      <block wx:for="{{classTraitList}}"> 
+        <text class="classTrait db fl" style="border-right:{{(index+1)%5==0 ? 'none' : '1rpx solid #424242'}}">{{item}}</text>
+      </block>
+    </view>
+    <view class="classroomTransBox">
+      <image class="transBox db" src="../../images/classroom1.png" mode="widthFix"></image>
+      <image class="transBox db" src="../../images/classroom2.png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+<!-- 自定义底部按钮 -->
+<view class="tabbar" wx:if="{{hasBuy}}">
+  <view class="barBtnS" bindtap="openConsult">
+    <view class="consult">
+      <image class="btnIcon db" src="../../images/consult.png"></image>
+      <text class="btnName db active">我要咨询</text>
+    </view>
+  </view>
+  <!-- <view class="hasBuyBox" bindtap="gosuccess"> -->
+  <view class="hasBuyBox">
+    <text class="hasBuy">已购买</text>
+  </view>
+</view>
+<view class="tabbar" wx:else>
+  <view class="barBtnS" bindtap="openConsult">
+    <view class="consult">
+      <image class="btnIcon db" src="../../images/consult.png"></image>
+      <text class="btnName db active">我要咨询</text>
+    </view>
+  </view>
+  <view class="barBtnB" wx:if="{{audit == '0'}}">
+    <!-- <view class="separateBtn" bindtap="goPaySuccess"> -->
+    <view class="separateBtn" bindtap="goPay">
+      <text>直接购买{{price}}元</text>
+    </view>
+    <!-- <view class="groupBtn" bindtap="goGroupSuccess"> -->
+    <view class="groupBtn" bindtap="goGroup">
+      <text>拼团（{{group_people}}人）{{group_price}}元</text>
+    </view>
+  </view>
+</view>

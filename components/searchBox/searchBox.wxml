@@ -1,0 +1,9 @@
+<!--components/searchBox/searchBox.wxml-->
+<!-- 搜索框 -->
+<view class="searchBox">
+  <view class="search clearfix">
+    <input class="searchInput fl" placeholder-class="phcolor" placeholder="搜索团购课堂" value="{{keyWords}}" bindinput="saveWords"></input>
+    <text class="lineShu db fl"></text>
+    <image class="searchIcon fr" bindtap="goSearch" src="../../images/search.png"></image>
+  </view>
+</view>

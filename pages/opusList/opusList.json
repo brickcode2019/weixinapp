@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "作品",
+  "usingComponents": {
+    "image-swiper": "../../components/imageSwiper/imageSwiper"
+  }
+}

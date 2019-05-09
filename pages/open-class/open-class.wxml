@@ -1,0 +1,99 @@
+<!--pages/open-class/open-class.wxml-->
+<!-- 销售角色 -->
+<view class="container" wx:if="{{role == '5'}}">
+  <!-- <scroll-view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltolower="pullUpLoad"> -->
+  <!--pages/sale/sale.wxml-->
+  <view class="container">
+    <!-- 销售简介 -->
+    <view class="sale clearfix">
+      <view class="salePicBox fl">
+        <image class="salePic db" src="{{saleInfo.avatar}}"></image>
+      </view>
+      <view class="saleInfoBox fl">
+        <text class="saleName db">名称：{{saleInfo.name}}</text>
+        <text class="saleHospital db">职务：{{saleInfo.duty}}</text>
+        <text class="saleHospital db">联系方式：{{saleInfo.phone}}</text>
+        <text class="saleHospital db">地址：{{saleInfo.address}}</text>
+      </view>
+    </view>
+    <!-- 机构简介 -->
+    <view class="companyInfoBox fl">
+      <view class="companyInfo clearfix">
+        <text class="saleName db fl">机构简介</text>
+        <view class="fl">
+          <view class="saleOpen" wx:if="{{!openSaleExtend}}"><text class="saleOpenBtn" bindtap="openSaleExtend">展开</text></view>
+          <view class="saleOpen" wx:else><text class="saleOpenBtn" bindtap="closeSaleExtend">收起</text></view> 
+        </view>
+      </view>
+      <view class="introductBox" wx:if="{{openExtend}}">
+        <text class="introduct db">{{saleInfo.company_desc}}福达合金快乐十分好的健康给对方会考虑更多见客户即可挂掉了萨卡价格恢复健康六个环节缸发动机看来是个好地方老师估计卡了</text>
+      </view>
+    </view>
+    <!-- 相关视频 -->
+    <view class="related">
+      <view class="bigTitle clearfix">
+        <text class="titleName db fl">推荐课程</text>
+      </view>
+      <block wx:for="{{classLists}}" wx:key="{{item.course_id}}">
+        <view class="video_list" data-id="{{item.course_id}}" data-title="{{item.name}}" bindtap="goClassroom">
+          <view class="fl thumb_box" data-id="{{item.course_id}}">
+            <image class="thumb db" src="{{item.cover}}"></image>
+            <image class="playIcon db" src="../../images/playBtn.png"></image>
+          </view>
+          <view class="fl profiles">
+            <view class="title" data-id="{{item.course_id}}">{{item.name}}</view>
+            <view class="desc" data-id="{{item.course_id}}">{{item.desc}}</view>
+            <view class="purchase clearfix">
+              <view class="followBox fl">
+                <image class="followPic db fl" src="../../images/follow.png" data-id="{{item.course_id}}"></image>
+                <text class="followNumber fl" data-id="{{item.course_id}}">{{item.people}}</text>
+              </view>
+              <text class="createTime fl">{{item.up_time}}</text>
+            </view>
+          </view>
+        </view>
+      </block> 
+    </view>
+  </view>
+</view>
+
+<!-- 用户角色 -->
+<view class="container" wx:else>
+  <!-- <scroll-view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltolower="pullUpLoad"> -->
+  <scroll-view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true">
+    <view class="page-body">
+      <image-swiper sHeight="330rpx" imgList="{{banners}}" url="icon"></image-swiper>
+      <view class="uservideo_lists">
+        <block wx:for="{{videos}}" wx:for-item="item" wx:key="id"> 
+          <navigator class="uservideo_list" url="../classroom/classroom?id={{item.course_id}}&title={{item.name}}">
+              <view class="thumb_box" data-id="{{item.course_id}}">
+                <image class="thumb db" src="{{item.cover}}" mode="widthFix"></image>
+                <image class="playIcon db" src="../../images/playIcon.png"></image>
+                <view class="videoInfo">
+                    <text class="videoTitle db fl">{{item.name}}</text>
+                    <view class="timeBox fr">
+                      <!-- <view class="clearfix">
+                        <image class="videoIcon db fl" src="../../images/videoIcon.png"></image>
+                        <text class="status db fr">20:45</text> 
+                      </view> -->
+                    </view>
+                </view>
+              </view>
+              <view class="profiles">
+                <view class="purchase clearfix">
+                  <image wx:if="{{item.course_type == '1'}}" class="teacherPic db fl" src="../../images/record.png"></image>
+                  <image wx:if="{{item.course_type == '2'}}" class="teacherPic db fl" src="../../images/live.png"></image>
+                  <image wx:if="{{item.course_type == '3'}}" class="teacherPic db fl" src="../../images/audition.png"></image>
+                  <text class="teacherName db fl" wx:if="{{item.course_type == '1'}}">录播</text>
+                  <text class="teacherName db fl" wx:if="{{item.course_type == '2'}}">直播</text>
+                  <text class="teacherName db fl" wx:if="{{item.course_type == '3'}}">试听</text>
+                  <text class="createTime db fl" wx:if="{{item.course_type == '1'}}">开课日期： {{item.up_time}}</text>
+                </view>
+              </view>
+            </navigator>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+

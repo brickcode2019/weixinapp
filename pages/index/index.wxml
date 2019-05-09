@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<!-- 主体 -->
+<view class="container">
+  <!-- <scroll-view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltolower="pullUpLoad"> -->
+  <scroll-view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true">
+    <view class='page-body'>
+      <image-swiper sHeight="330rpx" imgList="{{banners}}"></image-swiper>
+      <new-user wx:if="{{token == ''}}" bind:action="onShow"></new-user>
+      <tab-bar tabList="{{tabLists}}" currentNum="{{current_number}}"></tab-bar>
+    </view>
+  </scroll-view>
+</view>
