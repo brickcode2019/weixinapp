@@ -16,7 +16,9 @@ Component({
       let that = this;
       let imgList = that.properties.imgList;
       let sHeight = that.properties.sHeight;
-      console.log(imgList,sHeight);
+
+      // console.log(imgList,sHeight);
+
       that.setData({
         imgList: imgList,
         sHeight: sHeight

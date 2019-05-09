@@ -5,10 +5,10 @@ Component({
     currentNum: String,
   },
   data: {
-    currentTab: '', //预设当前tab的值
-    tabList: [],//tab切换列表
-    course_id: '',//课程ID
-    course_name: '',//课程名称
+    currentTab: '', // 预设当前tab的值
+    tabList: [],    // tab切换列表
+    course_id: '',  // 课程ID
+    course_name: '',// 课程名称
   },
   attached() {
     this.dataInit();
@@ -19,9 +19,8 @@ Component({
       let that = this;
       let list = that.properties.tabList;
       let cur = that.properties.currentNum;
-      console.log(list, cur);
+
       if (list.length > 0 && list.length <= 3) {
-        console.log(list[0].course_id);
         that.setData({
           tabList: list
         });
@@ -34,7 +33,8 @@ Component({
           tabList: tabLists
         })
       }
-      console.log(this.data.tabList, this.data.currentTab);
+
+      // console.log(this.data.tabList, this.data.currentTab);
     },
     // 点击标题切换当前页时改变样式
     swichNav: function (e) {

@@ -20,20 +20,19 @@ App({
             console.log(res)
           },
           complete: res => {
-            console.log(res)
           },
         });
         wx.getStorage({
             key: "loginCode",
             success: res => {
               console.log(res.data);
+
               this.globalData.loginCode = res.data;
             },
             fail: res => {
               console.log(res)
             },
             complete: res => {
-              console.log(res)
             }
         })
       }

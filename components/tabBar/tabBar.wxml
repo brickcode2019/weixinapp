@@ -16,7 +16,7 @@
   </scroll-view>
   <block wx:for="{{tabList}}" wx:key="{{item.course_id}}">
     <scroll-view scroll-y="true" class="tabContentItem {{currentTab==item.course_id?'active':''}}">
-      <block wx:for="{{item.detail_list}}">
+      <block wx:for="{{item.detail_list}}" wx:key="{{item.name}}">
         <view class="tabContent clearfix">
           <view class="contentInfo fl">
             <text class="contentTitle db">{{item.name}}</text>

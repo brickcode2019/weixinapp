@@ -31,15 +31,14 @@ Page({
   },
   onLoad: function () {
     var that = this;
-    console.log(app.globalData.userInfo);
-    console.log(app.globalData.role);
+    // console.log(app.globalData.userInfo);
+    // console.log(app.globalData.role);
+
     if (app.globalData.userInfo == '' || app.globalData.userInfo == 'undefined' || app.globalData.userInfo == null) {
-      console.log(1);
       wx.redirectTo({
         url: '../authorize/authorize',
       })
     } else {
-      console.log(3);
       that.getBanners();
       that.getTabList();
     }
@@ -59,8 +58,8 @@ Page({
         var code = res.data.code;
         if (code == 0) {
           var list = res.data.data;
+          // console.log(list)
 
-          console.log(list)
           that.setData({
             banners: list
           })
@@ -88,8 +87,8 @@ Page({
         var code = res.data.code;
         if (code == 0) {
           var list = res.data.data;
-          console.log(list);
-          console.log(list[0].course_id);
+          // console.log(list);
+
           that.setData({
             tabLists: list,
             current_number: list[0].course_id
